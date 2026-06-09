@@ -1,0 +1,104 @@
+/* Custom Styles & Brand Visual System */
+body {
+    /* Deep Space Radial Gradient */
+    background: radial-gradient(circle at top center, #00072d 0%, #051650 100%);
+    background-attachment: fixed;
+    color: #5eaf73; /* Primary brand text color */
+    overflow-x: hidden;
+}
+
+/* Starry Background */
+.stars-container {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: transparent;
+}
+
+.star {
+    position: absolute;
+    background: #5eaf73; /* Soft Ice Blue stars */
+    border-radius: 50%;
+    animation: twinkle infinite ease-in-out;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.2; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 5px #5eaf73, 0 0 10px #123499; }
+}
+
+/* Loading Screen Transitions */
+#loader {
+    transition: opacity 0.8s ease-out, visibility 0.8s;
+}
+
+/* Scroll Reveal Utility */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 1s cubic-bezier(0.5, 0, 0, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Polaroid Hover Effect (Gallery) */
+.polaroid-img {
+    transition: all 0.5s ease;
+    filter: grayscale(100%) sepia(20%) hue-rotate(180deg); /* Slight blue-green tint */
+}
+.polaroid-card:hover .polaroid-img {
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
+/* Brand Glassmorphism Panels */
+.glass-panel {
+    background: rgba(0, 7, 45, 0.6); /* Semi-transparent Rich Black */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid #0a2472; /* Bangladesh Green/Mid Blue */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 0 20px rgba(18, 52, 153, 0.2);
+    transition: all 0.4s ease;
+}
+
+.glass-panel:hover {
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 0 25px rgba(18, 52, 153, 0.5); /* Glowing shadow on hover */
+    border-color: #123499;
+}
+
+/* Rotating Vinyl */
+.spin-slow {
+    animation: spin 4s linear infinite;
+}
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Audio Visualizer */
+.bar {
+    width: 3px;
+    background-color: #123499; /* Brand Accent 2 */
+    border-radius: 2px;
+    animation: bounce 1s infinite alternate;
+    transform-origin: bottom;
+}
+.bar:nth-child(1) { animation-delay: 0.1s; height: 8px; }
+.bar:nth-child(2) { animation-delay: 0.3s; height: 16px; }
+.bar:nth-child(3) { animation-delay: 0.5s; height: 12px; }
+.bar:nth-child(4) { animation-delay: 0.2s; height: 18px; }
+
+@keyframes bounce {
+    0% { transform: scaleY(0.3); }
+    100% { transform: scaleY(1.2); }
+}
+.paused-anim { 
+    animation-play-state: paused !important; 
+    transform: scaleY(0.2) !important;
+}
+#vinyl-icon.paused-anim {
+    transform: rotate(0deg) !important;
+}
