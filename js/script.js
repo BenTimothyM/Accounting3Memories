@@ -7,7 +7,7 @@ const starsContainer = document.getElementById('stars');
     const isMobile = window.innerWidth < 768;
     
     // Jika pakai HP, tampilkan 40 bintang saja. Jika pakai Laptop, tampilkan 150 bintang.
-    const starCount = isMobile ? 40 : 150;
+    const starCount = isMobile ? 10 : 60;
 
     for(let i = 0; i < starCount; i++) {
         const star = document.createElement('div');
