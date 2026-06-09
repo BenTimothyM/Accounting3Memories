@@ -18,7 +18,7 @@ body {
 
 .star {
     position: absolute;
-    background: #5eaf73; /* Soft Ice Blue stars */
+    background: #ffffff; /* Soft Ice Blue stars */
     border-radius: 50%;
     animation: twinkle infinite ease-in-out;
 }
