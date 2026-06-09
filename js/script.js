@@ -1,14 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
             
     // 1. Generate Starry Background
-    const starsContainer = document.getElementById('stars');
-    for(let i = 0; i < 150; i++) {
+const starsContainer = document.getElementById('stars');
+    
+    // Mendeteksi apakah pengunjung menggunakan HP (lebar layar kurang dari 768px)
+    const isMobile = window.innerWidth < 768;
+    
+    // Jika pakai HP, tampilkan 40 bintang saja. Jika pakai Laptop, tampilkan 150 bintang.
+    const starCount = isMobile ? 40 : 150;
+
+    for(let i = 0; i < starCount; i++) {
         const star = document.createElement('div');
         star.classList.add('star');
         star.style.left = `${Math.random() * 100}vw`;
         star.style.top = `${Math.random() * 100}vh`;
         const size = Math.random() * 3;
-        star.style.width = `${size}px`; star.style.height = `${size}px`;
+        star.style.width = `${size}px`; 
+        star.style.height = `${size}px`;
         star.style.animationDuration = `${Math.random() * 3 + 2}s`;
         star.style.animationDelay = `${Math.random() * 2}s`;
         starsContainer.appendChild(star);
