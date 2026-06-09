@@ -33,9 +33,9 @@
         }
     </script>
 
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="font-sans antialiased overflow-hidden bg-brandBase text-brandText">
+<body class="font-sans antialiased overflow-hidden">
 
     <div class="stars-container" id="stars"></div>
 
@@ -227,7 +227,7 @@
     <div class="fixed bottom-6 right-6 z-[100] flex flex-col items-end gap-4 pointer-events-none">
         <div id="music-card" class="glass-panel rounded-2xl p-3 md:p-4 w-[280px] md:w-80 transform translate-x-[120%] opacity-0 transition-all duration-500 ease-out flex items-center gap-3 md:gap-4 pointer-events-none">
             <div class="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-brandBase shadow-[0_0_15px_rgba(10,36,114,0.5)] border border-brandAccent1/50">
-                <img src="/img/soundcardimg.jpg" alt="Album Cover" class="w-full h-full object-cover opacity-80 filter sepia(50%) hue-rotate(180deg)">
+                <img src="img/soundcardimg.jpg" alt="Album Cover" class="w-full h-full object-cover opacity-80 filter sepia(50%) hue-rotate(180deg)">
                 <div id="vinyl-icon" class="absolute inset-0 flex items-center justify-center paused-anim spin-slow bg-brandBase/40">
                     <i class="fa-solid fa-compact-disc text-brandText/80 text-2xl drop-shadow-md"></i>
                 </div>
@@ -269,7 +269,7 @@
         </button>
         
         <audio id="bg-audio" loop preload="metadata">
-            <source src="/sounds/sound.mp3" type="audio/mpeg">
+            <source src="sounds/sound.mp3" type="audio/mpeg">
         </audio>
     </div>
 
